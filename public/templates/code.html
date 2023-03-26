@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Editor</title>
+    <link rel="stylesheet" href="../style/codestyle.css" />
+  </head>
+  <body>
+    <h2>Python Editor</h2>
+    <br />
+    <button onclick="runCode()" id="run-button">Run</button>
+    <br />
+    <br />
+    <div class="editor">
+      <!-- <div class="linenumbers"></div> -->
+      <!-- <div class="linenumbers">1</div>
+        <div class="linenumbers">2</div>
+        <div class="linenumbers">3</div>
+        <div class="linenumbers">4</div>
+        <div class="linenumbers">5</div> -->
+      <div class="codearea" contenteditable></div>
+      <!-- <div class="codearea" contenteditable>#include &lt;stdio.h&gt;</div><div class="codearea" contenteditable>int main() {</div><div class="codearea" contenteditable>    printf("Hello, world!");</div><div class="codearea" contenteditable>    return 0;</div><div class="codearea" contenteditable>  }</div> -->
+    </div>
+    <br />
+    <h4>Output:</h4>
+    <div class="output">
+      <pre id="output-area">
+Output will appear here! Code suggestions appear based on the last five tokens of the line you are currently on. I have it console logging the 5 tokens so open the console to see what it is reading/passing to the models. When the models load and you type something then you will start seeing suggestions. My data for the models was from 1200 leetcode answers so the code suggestions are mostly for general cases like finishing a for loop. You will see some default responses like "class Solution" if it can't match any tokens to what you are passing in. It will also generate tokens every four seconds so the various orders aren't spamming the browser too much. Go ahead and type something in like 'for i' once it loads! It only took around 2 minutes for all the models to load on my machine (and my machine isn't the most impressive).</pre
+      >
+    </div>
+    <div class="sidebar">
+      <h3>Code Suggestions</h3>
+      <ul>
+        <li id="order-one-heading">
+          Order One Suggestion <span class="circle"></span>
+        </li>
+        <li id="order-one">Suggestion will be here</li>
+        <!--<button class="suggestion">Suggestion will be here</button>-->
+        <li id="order-two-heading">
+          Order Two Suggestion <span class="circle"></span>
+        </li>
+        <li id="order-two">Suggestion will be here</li>
+        <li id="order-three-heading">
+          Order Three Suggestion <span class="circle"></span>
+        </li>
+        <li id="order-three">Suggestion will be here</li>
+        <li id="order-four-heading">
+          Order Four Suggestion <span class="circle"></span>
+        </li>
+        <li id="order-four">Suggestion will be here</li>
+        <li id="order-five-heading">
+          Order Five Suggestion <span class="circle"></span>
+        </li>
+        <li id="order-five">Suggestion will be here</li>
+      </ul>
+    </div>
+    <script src="../action/lex.js" type="text/javascript"></script>
+    <script src="../action/lexpy.js" type="text/javascript"></script>
+    <script
+      src="../skulpt-dist-master/skulpt.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="../skulpt-dist-master/skulpt-stdlib.js"
+      type="text/javascript"
+    ></script>
+    <script type="module" src="../backend/mastermind.js" defer></script>
+    <script src="../action/models-worker.js" defer></script>
+    <script src="../action/codeeditor.js" defer></script>
+  </body>
+</html>
