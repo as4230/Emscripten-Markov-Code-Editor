@@ -1,8 +1,0 @@
-{
-    "files.associations": {
-        "regex": "c",
-        "xlocale": "c",
-        "xstring": "c",
-        "__locale": "c"
-    }
-}
