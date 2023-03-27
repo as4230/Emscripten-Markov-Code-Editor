@@ -3,6 +3,7 @@
 ## Description
 This toy project is a python code editor with simple code suggestions. The main purpose of this was for me to explore how to implement a simple algorithm (markov chain) and learn how to use emscripten. The code suggestion algorithm is just a markov chain that I implemented myself in C and then compiled using emscripten. I actually created 5 orders of markov chains but the code itself is very similar just with more tokens. I exported the methods needed then had it work with my main frontend JS to generate tokens. The code editor itself is extremely simple because I created it myself and I am not the best with design. Again, this isn't meant to be a practical code editor but just a learning experience for me.
 
+![image of editor](https://github.com/as4230/Emscripten-Markov-Code-Editor/blob/main/editor.png)
 ## Technologies used 
 --------------------
 - Skulpt: Used for executing Python code in the browser
