@@ -9,6 +9,7 @@ This toy project is a python code editor with simple code suggestions. The main 
 - Skulpt: Used for executing Python code in the browser
 - Emscripten: Used for compiling the markov chains implemented in C to JavaScript
 - Express: Used for serving my HTML/CSS/JS to my browser
+- Lexical Analysis: Used for tokenizing python code users are typing in. More information here: https://nutbread.github.io/lex/
 
 ## Instructions
 --------------------
